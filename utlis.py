@@ -7,7 +7,7 @@ import torch
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="FinTech Final")
+    parser = argparse.ArgumentParser(description="Binance Prediction Network")
 
     # Data
     parser.add_argument("--data_dir", metavar="DIR", help="Path to dataset")

@@ -132,11 +132,9 @@ def main():
         args, ticker, test_start_time, test_end_time
     )
 
-    # Training
     model = Buy_Model(len(predictors_list))
     model = model.to(args.device)
 
-    # Testing
     if args.eval:
         model = load_checkpoint(model, args.ckpt)
     else:

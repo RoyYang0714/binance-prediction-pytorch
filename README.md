@@ -1,4 +1,4 @@
-# Bianace Prediction Pytorch Model
+# Binance Prediction Pytorch Model
 
 ## Main Results
 ### ETHUSDT from 2021-01-01 00:00:00 to 2021-12-01 00:00:00
@@ -103,3 +103,6 @@ binance_prediction_pytorch
 ```bash
 ./run.sh ETHUSDT 1h --sell_rate 0.03 --ckpt ${YOUR_CHECKPOINT_PATH} --eval
 ```
+
+### Jupyter Notebook
+- Directly try with jupyter notebook file [Final.ipynb](./Final.ipynb).
