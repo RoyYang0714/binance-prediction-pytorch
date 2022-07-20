@@ -69,6 +69,7 @@ def predict(args, df, model):
     num_buy = 0
     num_sell = 0
 
+    buy_time = 0
     for i in tqdm(range(len(df))):
         X_cls_valid = [[df[p][i] for p in predictors_list]]
 
@@ -78,8 +79,7 @@ def predict(args, df, model):
 
         # Agent
         if (
-            i > 0
-            and (df.Close[i - 1] - df.Close[i]) / df.Close[i - 1] < -args.sell_rate
+            i == buy_time + args.shift_time - 1
             and asset["coins"] != 0
         ):
             asset["money"] += asset["coins"] * df.Close[i] * (1 - args.fee)
@@ -93,6 +93,7 @@ def predict(args, df, model):
                 asset["coins"] += buy_in
                 asset["money"] = 0
                 num_buy += 1
+                buy_time = i
             else:
                 prediction = 0
 

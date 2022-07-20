@@ -5,21 +5,21 @@
 |Time interval|   ROI   |
 |:-----------:|:-------:|
 |  1d (Human) |   2.74% |
-|  1d (Model) | 125.05% |
+|  1d (Model) | 304.96% |
 |  4h (Human) |  36.86% |
-|  4h (Model) | 300.37% |
+|  4h (Model) | 405.03% |
 |  1h (Human) |  37.55% |
-|  1h (Model) | 393.66% |
+|  1h (Model) | 290.01% |
 
 ### BTCUSDT from 2021-01-01 00:00:00 to 2021-12-01 00:00:00
 |Time interval|   ROI   |
 |:-----------:|:-------:|
 |  1d (Human) |   3.11% |
-|  1d (Model) |  30.08% |
+|  1d (Model) |  12.19% |
 |  4h (Human) |  18.30% |
-|  4h (Model) |  30.67% |
+|  4h (Model) |  31.64% |
 |  1h (Human) |  19.79% |
-|  1h (Model) |  32.07% |
+|  1h (Model) |  27.58% |
 
 ## Getting started
 ### Environment
@@ -80,10 +80,10 @@ binance_prediction_pytorch
 ./run.sh ETHUSDT 1d
 
 # 4h
-./run.sh ETHUSDT 4h --sell_rate 0.03
+./run.sh ETHUSDT 4h
 
 # 1h
-./run.sh ETHUSDT 1h --sell_rate 0.03
+./run.sh ETHUSDT 1h
 ```
 
 - Run training and evaluation on BTCUSDT
@@ -92,16 +92,16 @@ binance_prediction_pytorch
 ./run.sh BTCUSDT 1d
 
 # 4h
-./run.sh BTCUSDT 4h --sell_rate 0.03
+./run.sh BTCUSDT 4h
 
 # 1h
-./run.sh BTCUSDT 1h --sell_rate 0.03
+./run.sh BTCUSDT 1h
 ```
 
 ### Inference
 - Specify the checkpoint path with ``eval`` mode to only do the inference.
 ```bash
-./run.sh ETHUSDT 1h --sell_rate 0.03 --ckpt ${YOUR_CHECKPOINT_PATH} --eval
+./run.sh ETHUSDT 1h --ckpt ${YOUR_CHECKPOINT_PATH} --eval
 ```
 
 ### Jupyter Notebook
